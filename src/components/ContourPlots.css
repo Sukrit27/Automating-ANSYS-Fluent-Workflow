@@ -1,0 +1,55 @@
+.contour-page {
+  background-color: #ffffff;
+  padding: 40px;
+  text-align: center;
+}
+
+.contour-heading {
+  font-size: 32px;
+  color: #60b8be;
+  margin-bottom: 40px;
+}
+
+.contour-images {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: nowrap;            /* Force one row */
+  overflow-x: auto;            /* Allow horizontal scroll */
+  padding-bottom: 20px;
+
+  scroll-behavior: smooth;      /* smooth scroll */
+  scroll-snap-type: x mandatory;/* snap scrolling */
+}
+.contour-images::-webkit-scrollbar {
+  height: 6px;
+}
+.contour-images::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.contour-card {
+  min-width: 300px;
+  max-width: 350px;
+  scroll-snap-align: start;     /* snap alignment */
+}
+
+.contour-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 16px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.contour-card img:hover {
+  transform: scale(1.05);
+}
+
+.contour-card p {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;              /* bold labels */
+}

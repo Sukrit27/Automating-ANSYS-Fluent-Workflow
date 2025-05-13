@@ -1,0 +1,172 @@
+/* SavedPlots.css (Full Screen Layout + Hover & Scroll Effects) */
+
+/* 1. Container covers full viewport */
+.saved-plots-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #222;
+    box-sizing: border-box;
+  }
+  
+  /* 2. Headings */
+  .main-heading {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 60px;
+    color: #333;
+    animation: fadeInUp 0.6s ease;
+  }
+  .sub-heading {
+    text-align: center;
+    font-size: 2.2rem;
+    margin: 60px 0 30px;
+    color: #444;
+    animation: fadeInUp 0.6s ease;
+  }
+  
+  /* 3. Obtained Results Section (2-columns) */
+  .result-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 0.6s ease;
+  }
+  .result-image {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+  .result-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .result-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+  .result-description {
+    flex: 1;
+    min-width: 50%;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    animation: fadeInUp 0.6s ease;
+  }
+  
+  /* 4. Plots Gallery (Horizontal Scroll) */
+  .plot-gallery {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+  }
+  .plot-gallery::-webkit-scrollbar {
+    height: 8px;
+  }
+  .plot-gallery::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.2);
+    border-radius: 4px;
+  }
+  
+  .plot-item {
+    flex: 0 0 auto;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.6s ease;
+  }
+  .plot-item img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .plot-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  .plot-item:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  .plot-item p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+  }
+
+  /* SavedPlots.css */
+
+/* (existing rules above...) */
+
+/* 4. Plots Gallery — center in one row, no scroll */
+.plot-gallery {
+    display: flex;
+    justify-content: center; /* center all items */
+    flex-wrap: nowrap;        /* keep in one row */
+    gap: 30px;
+    margin-top: 20px;
+    overflow: visible;        /* remove horizontal scroll */
+  }
+  
+  /* plot-item hover stays as before */
+  .plot-item {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .plot-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  .plot-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .plot-item:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  /* 5. Fade-in Animation */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* 6. Responsive Adjustments */
+  @media (max-width: 768px) {
+    .result-section {
+      flex-direction: column;
+      text-align: center;
+    }
+    .result-image, .result-description {
+      max-width: 100%;
+      flex: 1 1 100%;
+    }
+    .plot-item {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+  
