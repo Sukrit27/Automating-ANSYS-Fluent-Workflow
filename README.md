@@ -81,5 +81,10 @@ Temperature contours are generated using ANSYS Fluent’s post-processing tools 
 
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/your-username/ac-motor-live-simulation.git
-   cd ac-motor-live-simulation
+   git clone https://github.com/Sukrit27/Automating-ANSYS-Fluent-Workflow.git
+   cd backend
+   python server.py
+
+   **In another terminal**
+   npm i
+   npm start
