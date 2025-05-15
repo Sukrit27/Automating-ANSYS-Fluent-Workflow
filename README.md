@@ -1,10 +1,10 @@
 # 🔌 Live Simulation of a 3-Phase AC Motor in ANSYS Fluent
 
-This project provides a **web-based interface** for live thermal simulation of a **3-phase AC motor**, powered by **ANSYS Fluent** and **Maxwell** integration. The system simulates temperature profiles dynamically based on varying **RPM** and **Power input**, visualizing **ohmic losses** and **temperature contours** in real time for efficient analysis.
+This project provides a **web-based interface** for real-time thermal simulation of any physical model in **ANSYS Fluent**, using external loss data from tools like **ANSYS Maxwell**. While this implementation uses a **3-phase AC motor** as an example, the system is **fully adaptable to other models**—making it a flexible framework for multiphysics simulation and analysis.
+
 
 ![WhatsApp Image 2025-05-14 at 22 02 51_b7b01868](https://github.com/user-attachments/assets/beb1ca94-187c-4621-9e8a-d8fd6410ad53)
 
-![Website Homepage](images/homepage.png)
 
 ---
 
@@ -22,6 +22,9 @@ This project provides a **web-based interface** for live thermal simulation of a
 - 🌡️ **Live Temperature Contour Visualization**  
   Each simulation returns temperature data along with **temperature contours**.
 
+  - 🧩 **Model-Agnostic Design**  
+  This system can be configured for **any geometry or physics model**, not just motors.
+
 - 📊 **Results Visualization**  
   Simulation outputs are displayed clearly in the frontend for comparative analysis.
 
@@ -30,17 +33,20 @@ This project provides a **web-based interface** for live thermal simulation of a
 ## 📸 Screenshots
 
 ### 🧮 Input Form for RPM & Power
-![Input Form](images/input-form.png)
+![WhatsApp Image 2025-05-14 at 22 04 46_6fea8ae9](https://github.com/user-attachments/assets/f2496138-0b52-4ec9-98fb-7a61e55d56c0)
+
 
 ---
 
 ### 📈 Simulation Results Display
-![Results Table](images/results-display.png)
+![WhatsApp Image 2025-05-14 at 21 26 59_9578d522](https://github.com/user-attachments/assets/d20d643d-0e02-4dd0-a9e9-520380bebf87)
+
 
 ---
 
 ### 🌡️ Temperature Contour Example
-![Temperature Contour](images/temp-contour.png)
+![WhatsApp Image 2025-05-14 at 22 05 15_4f1f1d82](https://github.com/user-attachments/assets/c50e135e-385e-41da-850a-eb180b82a5b7)
+
 
 ---
 
