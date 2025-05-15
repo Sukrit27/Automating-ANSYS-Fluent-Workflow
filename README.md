@@ -2,6 +2,8 @@
 
 This project provides a **web-based interface** for live thermal simulation of a **3-phase AC motor**, powered by **ANSYS Fluent** and **Maxwell** integration. The system simulates temperature profiles dynamically based on varying **RPM** and **Power input**, visualizing **ohmic losses** and **temperature contours** in real time for efficient analysis.
 
+![WhatsApp Image 2025-05-14 at 22 02 51_b7b01868](https://github.com/user-attachments/assets/beb1ca94-187c-4621-9e8a-d8fd6410ad53)
+
 ![Website Homepage](images/homepage.png)
 
 ---
